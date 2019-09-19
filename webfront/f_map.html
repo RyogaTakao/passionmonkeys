@@ -12,11 +12,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <iframe id="map" class='vh-90' src="https://maps.google.co.jp/maps?output=embed&t=m&hl=ja&z=18&ll=35.689634,139.692101&q=35.689634,139.692101" frameborder="0" scrolling="no" width="auto"></iframe>
-    <div class='d-flex'>
-      <a href="j_guiding.html" class="btn btn-primary flex-fill" role="button">合流</a>
-      <!-- <button class="btn btn-primary flex-fill" type="button">合流</button> -->
-      <button class="btn btn-light flex-fill" type="button">キャンセル</button>
+    <h1 class="text-center pt-2">詳細を入力</h1>
+    <iframe id="map" class='vh-80' src="https://maps.google.co.jp/maps?output=embed&t=m&hl=ja&z=18&ll=35.689634,139.692101&q=35.689634,139.692101" frameborder="0" scrolling="no" width="auto"></iframe>
+    <div class='vh-10'>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="メッセージを入力" aria-label="メッセージを入力" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <!-- <button class="btn btn-outline-secondary" type="button">送信</button> -->
+                <a href="f_waiting.html" class="btn btn-outline-secondary" role="button">送信</a>
+            </div>
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

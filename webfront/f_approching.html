@@ -12,20 +12,36 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1 class="text-center">お助け完了</h1>
-    <div>
-      <div class="text-center">情熱 猿人 さんの案内はいかがでしたか？</div>
-      <div class="text-center">
-        <img class="vw-30" src="resource/person.png" />
-        <div class="text-center">情熱 猿人</div>
+    <h1 class="text-center">助けてくれる人が見つかりました</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#profile" role="tab" aria-controls="home" aria-selected="true">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#map" role="tab" aria-controls="profile" aria-selected="false">現在地</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div style="padding-top: 25vh"></div>
+        <div class="text-center">
+          <img class="vw-30" src="resource/person.png" />
+          <div>
+            <div class="text-center">情熱 猿人</div>
+            <div class="text-center">到着まで：約5分</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+        MAP
       </div>
     </div>
-    <div class="form-group">
-        <label for="range1">Range:</label>
-        <input type="range" id="range1" class="form-control-range">
-      </div>
+
     <div class="text-center pt-4">
-      <button type="button" class="btn btn-primary">評価を送信して終了</button>
+      <a href="f_guiding.html" style="color:white" role="button" class="btn btn-primary">合流</a>
+      <!-- <button type="button" class="btn btn-primary">合流</button> -->
+      <button type="button" class="btn btn-light">キャンセル</button>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
