@@ -12,35 +12,60 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="list-group">
-        <a href="j_detail.html" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <img class="vw-30" src="resource/person.png" />
-            <div class="d-flex flex-column pl-2">
-              <div class="list-name">レオナルド・ディカプリオ</div>
-              <div class="list-caption">Please, take me to Tokyo station. And let's dance with me!</div>
+    <!-- BEGIN Tab -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="true">リスト</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#kokki" role="tab" aria-controls="kokki" aria-selected="false">実績</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="profile-tab">
+        <h1 class="text-center">助けを求める人</h1>
+        <div class="list-group">
+          <a href="j_detail.html" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <img class="vh-10" src="resource/person.png" />
+              <div class="d-flex flex-column pl-2">
+                <div class="list-name">レオナルド・ディカプリオ</div>
+                <div class="list-caption">Please, take me to Tokyo station. And let's dance with me!</div>
+              </div>
             </div>
-          </div>
-        </a>
-        <a href="j_detail.html" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <img class="vw-30" src="resource/person.png" />
-            <div class="d-flex flex-column pl-2">
-              <div class="list-name">マーティン・ルーサー・キング・ジュニア</div>
-              <div class="list-caption">I have a dream.</div>
+          </a>
+          <a href="j_detail.html" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <img class="vh-10" src="resource/person.png" />
+              <div class="d-flex flex-column pl-2">
+                <div class="list-name">マーティン・ルーサー・キング・ジュニア</div>
+                <div class="list-caption">I have a dream.</div>
+              </div>
             </div>
-          </div>
-        </a>
-        <a href="j_detail.html" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <img class="vw-30" src="resource/person.png" />
-            <div class="d-flex flex-column pl-2">
-              <div class="list-name">Lazaro Ludoviko Zamenhof</div>
-              <div class="list-caption">Kie estas la Tokio statio?</div>
+          </a>          
+          <a href="j_detail.html" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100">
+              <img class="vh-10" src="resource/person.png" />
+              <div class="d-flex flex-column pl-2">
+                <div class="list-name">L.L. Zamenhof</div>
+                <div class="list-caption">Kie estas la Tokio statio?</div>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
+      <div class="tab-pane fade" id="kokki" role="tabpanel" aria-labelledby="map-tab">   
+        <h1 class="text-center">獲得した実績</h1>
+        <div class="d-flex justify-content-around flex-wrap">
+          <div class="vw-30"><img style="max-width:100%" src="resource/flags/flag001.png"></div>
+          <div class="vw-30"><img style="max-width:100%" src="resource/flags/flag002.png"></div>
+          <div class="vw-30"><img style="max-width:100%" src="resource/flags/flag003.png"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End Tab -->
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
