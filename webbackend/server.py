@@ -5,6 +5,13 @@ from flask import Blueprint
 app = Flask(__name__)
 
 import res 
+import requests
+import pprint
+import requests
+import json
+
+APIKEY = '43466571565539376663774f43734d2f68544b4c48463069343232306f6131434a6c4a41434e694157582f'
+
 app.register_blueprint(res.app)
 dbname = 'database.db'
 conn = sqlite3.connect(dbname,check_same_thread=False)
@@ -95,7 +102,21 @@ def f_make_request():
     latitude = request.form['latitude']
     longitude = request.form['longitude']
     message = request.form['message']
-    # APIはここで使う
+
+    text = message
+    # text = u'３Ｄプリンタで銃の設計図を期間限定公開中、脱法ハーブはこちら'
+    # text = u'特に問題のないテキスト'
+    
+    url = 'https://api.apigw.smt.docomo.ne.jp/truetext/v1/sensitivecheck?APIKEY={}'.format( APIKEY )
+    header = {'Content-Type': 'application/x-www-form-urlencoded'}
+    body = { "text": text }
+    
+    response = requests.post(url, headers=header, data=body).json()
+    # text = json.dumps(response, sort_keys=True, ensure_ascii=False, indent=2)
+    if 'quotients' in response:
+        # print(response['quotients'][0]['cluster_name'])
+        return render_template('f_sensitive.html', quotients=response['quotients'], message=message)
+    
 
     cur.execute("insert into request(user_id, category, latitude, longitude, message)  values(?, ?, ?, ?, ?)", (user_id, category, latitude, longitude, message))
 
