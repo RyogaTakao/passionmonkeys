@@ -34,14 +34,18 @@
         </div>
       </div>
       <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
-        MAP
+        <iframe id="map" class='vh-90' src="https://maps.google.co.jp/maps?output=embed&t=m&hl=ja&z=18&ll=35.689634,139.692101&q=35.689634,139.692101" frameborder="0" scrolling="no" width="auto"></iframe>
+
       </div>
     </div>
 
     <div class="text-center pt-4">
-      <a href="f_guiding.html" style="color:white" role="button" class="btn btn-primary">合流</a>
-      <!-- <button type="button" class="btn btn-primary">合流</button> -->
-      <button type="button" class="btn btn-light">キャンセル</button>
+      <!-- a href="f_guiding.html" style="color:white" role="button" class="btn btn-primary">合流</a -->
+      <form action="/f_confluence" method="post">
+        <input type="hidden" name="request_id" value="{{request_id}}" />
+        <button type="submit" class="btn btn-primary">合流</button>
+        <button type="submit" class="btn btn-light">キャンセル</button>
+      </form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

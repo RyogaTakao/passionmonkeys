@@ -127,7 +127,7 @@ def f_make_request():
 @app.route("/f_helper_find", methods=['GET', 'POST'])
 def f_helper_find():
     request_id = request.form['request_id']
-    return render_template('f_approching.html', user_id=user_id, category=category)
+    return render_template('f_approching.html', request_id=request_id)
 
 @app.route("/f_confluence", methods=['GET', 'POST'])
 def f_confluence():
