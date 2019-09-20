@@ -9,8 +9,9 @@ import requests
 import json
 
 APIKEY = '43466571565539376663774f43734d2f68544b4c48463069343232306f6131434a6c4a41434e694157582f'
-text = u'３Ｄプリンタで銃の設計図を期間限定公開中、脱法ハーブはこちら'
+# text = u'３Ｄプリンタで銃の設計図を期間限定公開中、脱法ハーブはこちら'
 # text = u'特に問題のないテキスト'
+text = "Let's smoke cannabis together."
 
 url = 'https://api.apigw.smt.docomo.ne.jp/truetext/v1/sensitivecheck?APIKEY={}'.format( APIKEY )
 header = {'Content-Type': 'application/x-www-form-urlencoded'}
